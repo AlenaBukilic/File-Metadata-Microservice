@@ -7,6 +7,7 @@ const server = Hapi.server({
     host:'localhost',
     port: 8000
 });
+const route = require('./routes/index');
 
 async function start() {
 
@@ -22,7 +23,7 @@ async function start() {
             }
         }
     });
-    server.route(searchRoutes);
+    server.route(route);
 
     try {
         await server.start();
