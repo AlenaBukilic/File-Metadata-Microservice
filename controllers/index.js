@@ -1,8 +1,11 @@
 'use strict';
 
 exports.upload = async (req, res) => {
-    const file = req.payload.file;
-    const data = req.payload;
-    console.log(data);
+
+    const data = {
+        name: req.payload.fileUp.filename,
+        type: req.payload.fileUp.headers["content-type"],
+        size: req.payload.fileUp.bytes
+    }
     return await data;
 }

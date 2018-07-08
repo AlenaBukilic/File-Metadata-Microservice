@@ -8,9 +8,10 @@ module.exports = [
         path: '/api/upload',
         config: {
             payload: {
-                output: 'stream',
+                maxBytes: 209715200,
+                output: 'file',
                 parse: true,
-                allow: 'multipart/form-data'
+                // allow: 'multipart/form-data'
             }
         },
         handler: controller.upload
