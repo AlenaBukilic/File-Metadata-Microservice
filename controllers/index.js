@@ -1,6 +1,6 @@
 'use strict';
 
-exports.upload = async (req, res) => {
+exports.upload = (req) => {
 
     const data = {
         name: req.payload.fileUp.filename,
